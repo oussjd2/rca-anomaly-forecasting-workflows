@@ -1,14 +1,14 @@
 # RCA, Anomaly, and Forecasting Workflows
 
-Documentation-only case study for production-style diagnostic workflows connected to infrastructure monitoring.
+Documentation for diagnostic workflows connected to infrastructure monitoring.
 
-> Proprietary code, internal datasets, and operational details are not included. The goal is to document the system design and engineering ownership safely.
+> Proprietary code, internal datasets, and operational details are not included. This repository documents system design and sanitized implementation details.
 
 ## Summary
 
-This work productized forecasting, anomaly detection, and root-cause analysis as recurring workflows inside an internal monitoring platform. The outputs were not notebook-only experiments; they were connected to dashboards, scheduled jobs, alert investigation, and operator-facing summaries.
+This work productized forecasting, anomaly detection, and root-cause analysis as recurring workflows inside an internal monitoring platform. Outputs were connected to dashboards, scheduled jobs, alert investigation, and operator-facing summaries.
 
-## Confirmed Scope
+## Scope
 
 - 5 anomaly detection models
 - 16 RCA models
@@ -31,25 +31,21 @@ flowchart TD
   G --> H["Dashboard and investigation summary"]
 ```
 
-## Engineering Responsibilities
+## Engineering Scope
 
-- Designed recurring processing and inference workflows
-- Integrated forecasting and anomaly results into platform dashboards
-- Built RCA outputs around ranked probable causes and graph-style reasoning
-- Added checkpointing and recovery patterns for scheduled workflows
-- Connected diagnostic results to operator workflows
+- Recurring processing and inference workflows
+- Forecasting and anomaly outputs integrated into dashboards
+- RCA outputs built around ranked probable causes and graph-style reasoning
+- Checkpointing and recovery patterns for scheduled workflows
+- Diagnostic results connected to operator workflows
 
-## Methods Used
+## Methods
 
 - Time-series forecasting
 - Anomaly detection
 - PCMCI+ and lag-based RCA analysis
 - Scheduled orchestration
 - Dashboard-connected investigation summaries
-
-## Recruiter Signal
-
-This project demonstrates data and AI engineering delivered as operational software: pipelines, scheduled jobs, backend integration, diagnostic product workflows, and measurable troubleshooting impact.
 
 ## Tech Stack
 
